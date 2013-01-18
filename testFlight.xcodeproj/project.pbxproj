@@ -299,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: TECSOL Software Pvt Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: TECSOL Software Pvt Ltd";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testFlight/testFlight-Prefix.pch";
 				INFOPLIST_FILE = "testFlight/testFlight-Info.plist";
@@ -308,6 +309,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "487FE89F-EB5F-49D8-83DC-4B6B501AAC65";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "487FE89F-EB5F-49D8-83DC-4B6B501AAC65";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
