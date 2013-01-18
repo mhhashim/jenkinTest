@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)buttonPressed:(id)sender;
+- (IBAction)crash1Pressed:(id)sender;
+- (IBAction)crash2Pressed:(id)sender;
+
 
 @end

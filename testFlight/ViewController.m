@@ -18,12 +18,31 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [TestFlight passCheckpoint:@"First View loaded"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)buttonPressed:(id)sender {
+    
+    
+    static int count=0;
+    count++;
+    NSString *message=[NSString stringWithFormat:@"Button Press :%d",count];
+    [TestFlight passCheckpoint:message];
+}
+
+- (IBAction)crash1Pressed:(id)sender {
+    
+    NSArray *myArray=[NSArray arrayWithObjects:@"0",@"1", nil];
+    NSString *temp=[myArray objectAtIndex:2];
+}
+
+- (IBAction)crash2Pressed:(id)sender {
 }
 
 @end

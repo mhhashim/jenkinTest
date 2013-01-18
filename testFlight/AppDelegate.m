@@ -14,6 +14,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+ 
+#ifdef TF
+    
+[TestFlight takeOff:@"f559ec5570ff3f15c516f010570baab8_MjU2MDYyMDExLTEwLTE5IDAzOjUwOjU5LjYwNjM0MQ"];
+    NSLog(@"TestFlight Started");
+    TFLog(@"TestFlight Started");
+    
+#endif
+    
+
+    
+#ifdef TESTING
+    NSLog(@"Warning: UDID is collected");
+    TFLog(@"Warning: UDID is collected");
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+#endif
+    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {

@@ -19,6 +19,10 @@
 		884FC9AE16A6718800F3C09C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884FC9AD16A6718800F3C09C /* ViewController.m */; };
 		884FC9B116A6718800F3C09C /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884FC9AF16A6718800F3C09C /* ViewController_iPhone.xib */; };
 		884FC9B416A6718800F3C09C /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884FC9B216A6718800F3C09C /* ViewController_iPad.xib */; };
+		884FC9BF16A676B400F3C09C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 884FC9BB16A676B400F3C09C /* README.md */; };
+		884FC9C016A676B400F3C09C /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 884FC9BC16A676B400F3C09C /* release_notes.md */; };
+		884FC9C116A676B400F3C09C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 884FC9BE16A676B400F3C09C /* libTestFlight.a */; };
+		884FC9C316A676E400F3C09C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 884FC9C216A676E400F3C09C /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,12 @@
 		884FC9AD16A6718800F3C09C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		884FC9B016A6718800F3C09C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		884FC9B316A6718800F3C09C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		884FC9BB16A676B400F3C09C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		884FC9BC16A676B400F3C09C /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		884FC9BD16A676B400F3C09C /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		884FC9BE16A676B400F3C09C /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		884FC9C216A676E400F3C09C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		884FC9C416A677EB00F3C09C /* TECSOLTEST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TECSOLTEST.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,9 +56,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884FC9C316A676E400F3C09C /* libz.dylib in Frameworks */,
 				884FC99516A6718700F3C09C /* UIKit.framework in Frameworks */,
 				884FC99716A6718700F3C09C /* Foundation.framework in Frameworks */,
 				884FC99916A6718800F3C09C /* CoreGraphics.framework in Frameworks */,
+				884FC9C116A676B400F3C09C /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +70,8 @@
 		884FC98516A6718700F3C09C = {
 			isa = PBXGroup;
 			children = (
+				884FC9C216A676E400F3C09C /* libz.dylib */,
+				884FC9BA16A6765100F3C09C /* testing */,
 				884FC99A16A6718800F3C09C /* testFlight */,
 				884FC99316A6718700F3C09C /* Frameworks */,
 				884FC99116A6718700F3C09C /* Products */,
@@ -85,6 +99,7 @@
 		884FC99A16A6718800F3C09C /* testFlight */ = {
 			isa = PBXGroup;
 			children = (
+				884FC9C416A677EB00F3C09C /* TECSOLTEST.h */,
 				884FC9A316A6718800F3C09C /* AppDelegate.h */,
 				884FC9A416A6718800F3C09C /* AppDelegate.m */,
 				884FC9AC16A6718800F3C09C /* ViewController.h */,
@@ -108,6 +123,17 @@
 				884FC9AA16A6718800F3C09C /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		884FC9BA16A6765100F3C09C /* testing */ = {
+			isa = PBXGroup;
+			children = (
+				884FC9BB16A676B400F3C09C /* README.md */,
+				884FC9BC16A676B400F3C09C /* release_notes.md */,
+				884FC9BD16A676B400F3C09C /* TestFlight.h */,
+				884FC9BE16A676B400F3C09C /* libTestFlight.a */,
+			);
+			name = testing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +193,8 @@
 				884FC9AB16A6718800F3C09C /* Default-568h@2x.png in Resources */,
 				884FC9B116A6718800F3C09C /* ViewController_iPhone.xib in Resources */,
 				884FC9B416A6718800F3C09C /* ViewController_iPad.xib in Resources */,
+				884FC9BF16A676B400F3C09C /* README.md in Resources */,
+				884FC9C016A676B400F3C09C /* release_notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +266,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -252,7 +281,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -260,6 +289,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -268,10 +298,16 @@
 		884FC9B816A6718800F3C09C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: TECSOL Software Pvt Ltd";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testFlight/testFlight-Prefix.pch";
 				INFOPLIST_FILE = "testFlight/testFlight-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "487FE89F-EB5F-49D8-83DC-4B6B501AAC65";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -279,10 +315,18 @@
 		884FC9B916A6718800F3C09C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: TECSOL Software Pvt Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: TECSOL Software Pvt Ltd";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testFlight/testFlight-Prefix.pch";
 				INFOPLIST_FILE = "testFlight/testFlight-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "487FE89F-EB5F-49D8-83DC-4B6B501AAC65";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "487FE89F-EB5F-49D8-83DC-4B6B501AAC65";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -306,6 +350,7 @@
 				884FC9B916A6718800F3C09C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
